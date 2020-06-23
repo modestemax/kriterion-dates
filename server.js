@@ -13,7 +13,7 @@ if(checkPeriod && +from && +to){
 
 
 check=()=>{
-console.log(`\nchecking dates`)
+console.log(`\n[${new Date().getHours()}:${new Date().getMinutes()}] checking dates`)
 	let idx=0
 	idays.forEach((day)=>{
 	
