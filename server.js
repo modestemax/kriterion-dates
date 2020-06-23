@@ -25,8 +25,12 @@ console.log(`\nchecking dates`)
  		.then(res => res.text())
     	.then(body => {
     		console.log(`\nDisponibility for `+day)
+    		let times={}
     		for( let [,time] of body.matchAll(/value="(\d+:\d+)"/g)){
-    			
+    			let [h,m]=time.split(':')
+    			times[h]=times[h]||time    			
+    		}
+    		for(let time of Object.values(times)){
     			console.log(time)
     		}
     		idx++
