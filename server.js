@@ -1,5 +1,5 @@
 const fetch = require('node-fetch');
-const CHECK_DELAY=10*1e3
+const CHECK_DELAY=30*1e3
 const {from,to,days,month,checkPeriod}=require('./dates')
 let idays=[]
 
