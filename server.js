@@ -14,7 +14,8 @@ if(checkPeriod && +from && +to){
 
 check=()=>{
 console.log(`\nchecking dates`)
-	idays.forEach((day,idx)=>{
+	let idx=0
+	idays.forEach((day)=>{
 	
 	setTimeout(()=>	fetch(`https://www.webassessor.com/tda.do?tile=populateTimes&override=false&id=&timeZone=Africa/Douala&m=${month-1}&d=${day}&y=2020&containingPage=dateTimeSelection&regId=8499654`, {
   			"headers": {    
@@ -28,7 +29,8 @@ console.log(`\nchecking dates`)
     			
     			console.log(time)
     		}
-    		checkAgain(idx+1,idays.length)
+    		idx++
+    		checkAgain(idx,idays.length)
     	}), 2e3)
    }) 	
 }
