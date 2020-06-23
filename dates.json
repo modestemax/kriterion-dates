@@ -1,6 +1,6 @@
 {
 	"month":6,
-	"checkPeriod":true,
+	"checkPeriod":false,
 	"from":23,
 	"to":28,
 	"days":[27,28]
