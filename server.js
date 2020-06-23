@@ -16,7 +16,7 @@ check=()=>{
 console.log(`\nchecking dates`)
 	idays.forEach((day,idx)=>{
 	
-		fetch(`https://www.webassessor.com/tda.do?tile=populateTimes&override=false&id=&timeZone=Africa/Douala&m=${month-1}&d=${day}&y=2020&containingPage=dateTimeSelection&regId=8499654`, {
+	setTimeout(()=>	fetch(`https://www.webassessor.com/tda.do?tile=populateTimes&override=false&id=&timeZone=Africa/Douala&m=${month-1}&d=${day}&y=2020&containingPage=dateTimeSelection&regId=8499654`, {
   			"headers": {    
      			"cookie": "KRYTERIONID=AEAA132DA0CEFBC41DD4E1BD11718E8BEC66616636500CD4E7B454E41B82988B.PRD1-WATTA01"
   			}
@@ -29,7 +29,7 @@ console.log(`\nchecking dates`)
     			console.log(time)
     		}
     		checkAgain(idx+1,idays.length)
-    	})
+    	}), 2e3)
    }) 	
 }
 
